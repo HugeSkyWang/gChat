@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.devinwang.gchat.mapper.ChatDiscussMapper">
+
+    <update id="incrementLikes">
+        UPDATE chat_discuss
+        SET likes = likes + 1
+        WHERE
+            content_id = #{contentId};
+    </update>
+    <update id="reduceLikes">
+        UPDATE chat_discuss
+        SET likes = likes - 1
+        WHERE
+            content_id = #{contentId};
+    </update>
+</mapper>

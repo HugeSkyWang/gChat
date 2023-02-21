@@ -1,0 +1,40 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/undergraduate?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8
+    username: root
+    password: 20020523
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # redis 配置
+  redis:
+    host: 114.115.134.9
+    port: 6666
+    database: 0
+    timeout: 1800000
+    password: 20020523
+    lettuce:
+      pool:
+        max-active: 20
+        max-wait: -1
+        #最大阻塞等待时间（负数表示没限制）
+        max-idle: 5
+        min-idle: 0
+
+# mybatis-plus 日志配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 阿里云
+# 不同服务器，地址不同
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-zhangjiakou.aliyuncs.com
+      keyid: LTAI5tRs5H7TFJdo3YrrBEh1
+      keysecret: 3c3Boua5hsR4XfJEORchjDI2JA6FSz
+      bucketname: devin-edu

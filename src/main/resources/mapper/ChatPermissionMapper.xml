@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.devinwang.gchat.mapper.ChatPermissionMapper">
+
+    <select id="selectPermissionByUserId" resultType="java.lang.String">
+        SELECT DISTINCT p.permission
+        FROM
+            chat_user_role ur
+                LEFT JOIN chat_role r ON ur.role_id = r.role_id
+                LEFT JOIN chat_role_permission rp ON ur.role_id = rp.role_id
+                LEFT JOIN chat_permission p ON p.permission_id = rp.permission_id
+        WHERE
+            ur.user_id = #{id}
+    </select>
+</mapper>
