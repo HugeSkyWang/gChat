@@ -5,17 +5,17 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/undergraduate?serverTimezone=GMT%2B8&useSSL=false&characterEncoding=utf-8
     username: root
-    password: 20020523
+    password: 
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
   # redis 配置
   redis:
-    host: 114.115.134.9
+    host: 
     port: 6666
     database: 0
     timeout: 1800000
-    password: 20020523
+    password: 
     lettuce:
       pool:
         max-active: 20
@@ -34,7 +34,7 @@ mybatis-plus:
 aliyun:
   oss:
     file:
-      endpoint: oss-cn-zhangjiakou.aliyuncs.com
-      keyid: LTAI5tRs5H7TFJdo3YrrBEh1
-      keysecret: 3c3Boua5hsR4XfJEORchjDI2JA6FSz
-      bucketname: devin-edu
+      endpoint: 
+      keyid: 
+      keysecret: 
+      bucketname: 
