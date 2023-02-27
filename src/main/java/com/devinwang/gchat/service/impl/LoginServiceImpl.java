@@ -46,9 +46,9 @@ public class LoginServiceImpl implements LoginService {
         }
 
         //小程序唯一标识   (在微信小程序管理后台获取)
-        String wxspAppid = "wx825685dd56d3e091";
+        String wxspAppid = "";
         //小程序的 app secret (在微信小程序管理后台获取)
-        String wxspSecret = "74c4edbb3c7d3446ee440497c0b7c04f";
+        String wxspSecret = "";
         //授权（必填）
         String grant_type = "authorization_code";
 
